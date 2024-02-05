@@ -1,0 +1,18 @@
+<h1 id="n"> Name</h1>
+<button id="name1" onclick="change1(event)"> Darryn</button>
+<button id="name2" onclick="change1(event)"> Jade</button>
+<button id="name3" onclick="change1(event)"> Anishya </button>
+<script>
+var name1=document.getElementById("name1");
+var name2=document.getElementById("name2");
+var name3=document.getElementById("name3");
+function change1(event){
+  // name1.textContent = n.value
+  var par =document.getElementById("n")
+   // name1.innerText = par.value
+   par.textContent= event.target.textContent
+
+   //console.log(txt)
+  
+}
+</script>

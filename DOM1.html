@@ -1,0 +1,28 @@
+<h1 id="title"> Hello World</h1>
+<form>
+    <input  id="num1" >
+    <input  id="num2" >
+</form><br>
+<button onclick="Add()"> Add </button>
+<p id="result" >Result</p>
+
+
+<script>
+    var demo = document.getElementById("title")
+    console.log(demo.textContent)
+    demo.textContent ="Bye World"
+    function Add(){
+        var n1 =document.getElementById("num1")
+        var box1 =Number(n1.value);
+        var n2 =document.getElementById("num2")
+        var box2 =Number( n2.value);
+        var n3 =document.getElementById("result")
+        var total = box1 +box2;
+        console.log(total)
+        result.textContent =total
+
+        console.log(n1.value)
+
+    }
+
+</script>

@@ -1,0 +1,16 @@
+<input id="inputBox"  onkeyup="come()">
+<button id="demo" onclick="come()">Check</button>
+<h1 id="result"></h1>
+
+<script>
+  
+    
+        var box = document.getElementById("inputBox")
+        var result1 = document.getElementById("result")
+        console.log(box.value)
+        function come (){
+            console.log("come")
+        result1.textContent =box.value
+    }
+   
+</script>
