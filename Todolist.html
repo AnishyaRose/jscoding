@@ -66,6 +66,11 @@ input{
     function todo(){
         var nolist =document.createElement("li") 
         var inputBox =document.getElementById("box").value  
+        if(inputBox =="")
+        {
+            alert("Please Write Something")
+        }
+        console.log(inputBox)
         nolist.innerHTML=inputBox +"<Button onclick='deletebtn(event)'> Delete</Button>"
        document.getElementById("unod").appendChild(nolist);
     }
