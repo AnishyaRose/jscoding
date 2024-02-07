@@ -1,0 +1,82 @@
+<style>
+    .box1{
+        padding: 20px;
+        color: brown;
+        background-color: beige;
+        text-align: center;
+        
+    }
+    ul {
+  margin: 0;
+  padding: 0;
+}
+
+button{
+    float: right;
+}
+ 
+ ul li{
+    padding: 12px 8px 12px 40px;
+        cursor: pointer;
+       position: relative;
+       display: block;
+       background-color:wheat;
+    }
+
+    ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+    ul li:hover {
+  background-color: brown;
+    }
+.addBtn{
+    color:firebrick;
+    background-color: lightcoral;
+
+}
+.addBtn:hover {
+  background-color: #bbb;
+}
+input{
+    height: 25px;
+    width: 50%;
+}
+
+
+</style>
+<div class="box1">
+    <h2>TODO list</h2>
+    <input type="text" id="box" placeholder="enter your list">
+    <button onclick="todo()" class="addBtn">Add</button>
+</div>
+
+    <ul id="unod">
+        <li>Cosmetics<button class="del" onclick="deletebtn(event)" >Delete</button></li>
+        <li >Vegetables<button class="del1" onclick="deletebtn(event)">Delete</button></li>
+        <li>Fruits<button class="del2" onclick="deletebtn(event)">Delete</button></li>
+        <li>Dress<button class="del3" onclick="deletebtn(event)">Delete</button></li>
+        <li>Books<button  onclick="deletebtn(event)">Delete</button></li>
+    </ul>
+
+
+<script>
+   
+    var unlist =document.getElementById("olist")
+
+    function todo(){
+        var nolist =document.createElement("li") 
+        var inputBox =document.getElementById("box").value  
+       // var t = document.createTextNode(inputBox);
+        nolist.innerHTML=inputBox +"<Button onclick='deletebtn(event)'> Delete</Button>"
+      // nolist.appendChild(t);
+       document.getElementById("unod").appendChild(nolist);
+
+     //inputBox.textContent = unlist.appendChild(inputBox.value)
+       
+    }
+
+    function deletebtn(event){
+       var newbox =document.getElementById("unod")
+       event.target.parentElement.remove();
+    }
+</script>
