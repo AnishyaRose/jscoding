@@ -11,7 +11,7 @@
   padding: 0;
 }
 
-button{
+   button{
     float: right;
 }
  
@@ -66,13 +66,8 @@ input{
     function todo(){
         var nolist =document.createElement("li") 
         var inputBox =document.getElementById("box").value  
-       // var t = document.createTextNode(inputBox);
         nolist.innerHTML=inputBox +"<Button onclick='deletebtn(event)'> Delete</Button>"
-      // nolist.appendChild(t);
        document.getElementById("unod").appendChild(nolist);
-
-     //inputBox.textContent = unlist.appendChild(inputBox.value)
-       
     }
 
     function deletebtn(event){
